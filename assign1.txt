@@ -1,0 +1,304 @@
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1
+$ git init
+Initialized empty Git repository in D:/DotNetBatch/assignment1/.git/
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git config --global user.name "sobhandip1"
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git config --global user.email "sobhandip.samanta@zensar.com"
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git config --edit --global
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ code REMARK.md
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ code rules.txt
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git add .
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git commit -m "here we are creating two file "
+[master (root-commit) b9ef136] here we are creating two file
+ 2 files changed, 4 insertions(+)
+ create mode 100644 REMARK.md
+ create mode 100644 rules.txt
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git log
+commit b9ef1369c6de7b77ba7feebe0599f9821116ddf2 (HEAD -> master)
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:19:52 2020 +0530
+
+    here we are creating two file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git remote add origin https://github.com/dotnet-shobandeep/Assignment1.git
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 402 bytes | 134.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dotnet-shobandeep/Assignment1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch1)
+$ git branch
+* branch1
+  master
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch1)
+$ code index1.html
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch1)
+$ git add .
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch1)
+$ git commit -m "creating a html file index"
+[branch1 6aaa652] creating a html file index
+ 1 file changed, 25 insertions(+)
+ create mode 100644 index1.html
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch1)
+$ ls
+index1.html  REMARK.md  rules.txt
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git merge branch1
+Updating b9ef136..6aaa652
+Fast-forward
+ index1.html | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+ create mode 100644 index1.html
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git diff master branch1
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 506 bytes | 168.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dotnet-shobandeep/Assignment1.git
+   b9ef136..6aaa652  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git log
+commit 6aaa6525fb93f6bd4aa2138339df82b46379f242 (HEAD -> master, origin/master, branch1)
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:34:05 2020 +0530
+
+    creating a html file index
+
+commit b9ef1369c6de7b77ba7feebe0599f9821116ddf2
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:19:52 2020 +0530
+
+    here we are creating two file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git log --oneline
+6aaa652 (HEAD -> master, origin/master, branch1) creating a html file index
+b9ef136 here we are creating two file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git diff 6aaa b9ef
+diff --git a/index1.html b/index1.html
+deleted file mode 100644
+index edb3198..0000000
+--- a/index1.html
++++ /dev/null
+@@ -1,25 +0,0 @@
+-<html>
+-    <head>
+-        <title>table creation</title>
+-    </head>
+-    <body>
+-        <table border="3">
+-            <tr>
+-            <th>Name</th>
+-            <th>Staffid</th>
+-            <th>Assignment Name</th>
+-            </tr>
+-            <tr>
+-            <td>Sobhandip Samanta</td>
+-            <td>59169</td>
+-            <td>Assignment1</td>
+-            </tr>
+-            <tr>
+-            <td>Sayantan Chattarjee</td>
+-            <td>59156</td>
+-            <td>Assignment2</td>
+-            </tr>
+-
+-        </table>
+-    </body>
+-</html>
+\ No newline at end of file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ code rules.txt
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git add .
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git commit -m "adding a new line in rules file"
+[master 0286955] adding a new line in rules file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git log
+commit 028695570eea3db36a048164b0cf36f23e8edf70 (HEAD -> master)
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:48:32 2020 +0530
+
+    adding a new line in rules file
+
+commit 6aaa6525fb93f6bd4aa2138339df82b46379f242 (origin/master, branch1)
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:34:05 2020 +0530
+
+    creating a html file index
+
+commit b9ef1369c6de7b77ba7feebe0599f9821116ddf2
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:19:52 2020 +0530
+
+    here we are creating two file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       rules.txt
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git log
+commit 6aaa6525fb93f6bd4aa2138339df82b46379f242 (HEAD -> master, origin/master, branch1)
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:34:05 2020 +0530
+
+    creating a html file index
+
+commit b9ef1369c6de7b77ba7feebe0599f9821116ddf2
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:19:52 2020 +0530
+
+    here we are creating two file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git log --oneline
+6aaa652 (HEAD -> master, origin/master, branch1) creating a html file index
+b9ef136 here we are creating two file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git branch
+  branch1
+* master
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch2)
+$ code color.css
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch2)
+$ git add .
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch2)
+$ git commit -m "creating a css file into branch2"
+[branch2 5f56931] creating a css file into branch2
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 100644 color.css
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch2)
+$ git status
+On branch branch2
+nothing to commit, working tree clean
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch2)
+$ git log
+commit 5f56931cab1c30bfbd2c2798ff85cd5db9ec7521 (HEAD -> branch2)
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:54:08 2020 +0530
+
+    creating a css file into branch2
+
+commit 6aaa6525fb93f6bd4aa2138339df82b46379f242 (origin/master, master, branch1)
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:34:05 2020 +0530
+
+    creating a html file index
+
+commit b9ef1369c6de7b77ba7feebe0599f9821116ddf2
+Author: sobhandip1 <sobhandip.samanta@zensar.com>
+Date:   Tue Jul 14 20:19:52 2020 +0530
+
+    here we are creating two file
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch2)
+$ ls
+color.css  index1.html  REMARK.md  rules.txt
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (branch2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git branch
+  branch1
+  branch2
+* master
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$ git merge branch2
+Updating 6aaa652..5f56931
+Fast-forward
+ color.css | 3 +++
+ rules.txt | 3 ++-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 100644 color.css
+
+SOBHANDIP@LAPTOP-09SDLO4E MINGW64 /d/DotNetBatch/assignment1 (master)
+$
